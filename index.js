@@ -38,7 +38,7 @@ async function createUser(email, username) {
     }
 
     try {
-        let response = await cognito.adminCreateUser(cognitoParams).promise();
+        const response = await cognito.adminCreateUser(cognitoParams).promise();
         console.log(response)
     } catch (err) {
         console.log({ err })
